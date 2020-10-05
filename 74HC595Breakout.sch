@@ -312,24 +312,8 @@ F 3 "" H 7250 3700 50  0001 C CNN
 	1    7250 3700
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:VCC #PWR010
-U 1 1 5F4E858C
-P 7850 2700
-F 0 "#PWR010" H 7850 2550 50  0001 C CNN
-F 1 "VCC" H 7865 2873 50  0000 C CNN
-F 2 "" H 7850 2700 50  0001 C CNN
-F 3 "" H 7850 2700 50  0001 C CNN
-	1    7850 2700
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	7650 2700 7850 2700
-Wire Wire Line
-	7850 2700 8150 2700
 Wire Wire Line
 	8150 2700 8150 2800
-Connection ~ 7850 2700
 Wire Wire Line
 	8150 2800 8150 2900
 Connection ~ 8150 2800
@@ -351,4 +335,78 @@ Connection ~ 8150 3300
 Wire Wire Line
 	8150 3400 8150 3500
 Connection ~ 8150 3400
+$Comp
+L power:Vdrive #PWR0101
+U 1 1 5F7B6399
+P 7900 2700
+F 0 "#PWR0101" H 7700 2550 50  0001 C CNN
+F 1 "Vdrive" H 7915 2873 50  0000 C CNN
+F 2 "" H 7900 2700 50  0001 C CNN
+F 3 "" H 7900 2700 50  0001 C CNN
+	1    7900 2700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2700 7900 2700
+Connection ~ 7900 2700
+Wire Wire Line
+	7900 2700 8150 2700
+$Comp
+L Connector:Conn_01x02_Male J4
+U 1 1 5F7C414E
+P 8450 2800
+F 0 "J4" H 8422 2682 50  0000 R CNN
+F 1 "Load Power" H 8422 2773 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 8450 2800 50  0001 C CNN
+F 3 "~" H 8450 2800 50  0001 C CNN
+	1    8450 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5F7C8774
+P 8250 2800
+F 0 "#PWR0102" H 8250 2550 50  0001 C CNN
+F 1 "GND" H 8255 2627 50  0000 C CNN
+F 2 "" H 8250 2800 50  0001 C CNN
+F 3 "" H 8250 2800 50  0001 C CNN
+	1    8250 2800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 2700 8250 2700
+Connection ~ 8150 2700
+$Comp
+L Jumper:SolderJumper_2_Bridged JP3
+U 1 1 5F7CA617
+P 7250 1850
+F 0 "JP3" H 7200 2000 50  0000 L CNN
+F 1 "Power Select" H 7000 1700 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 7250 1850 50  0001 C CNN
+F 3 "~" H 7250 1850 50  0001 C CNN
+	1    7250 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0103
+U 1 1 5F7CF362
+P 7100 1850
+F 0 "#PWR0103" H 7100 1700 50  0001 C CNN
+F 1 "VCC" H 7000 1850 50  0000 C CNN
+F 2 "" H 7100 1850 50  0001 C CNN
+F 3 "" H 7100 1850 50  0001 C CNN
+	1    7100 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Vdrive #PWR0104
+U 1 1 5F7CFA11
+P 7400 1850
+F 0 "#PWR0104" H 7200 1700 50  0001 C CNN
+F 1 "Vdrive" H 7550 1850 50  0000 C CNN
+F 2 "" H 7400 1850 50  0001 C CNN
+F 3 "" H 7400 1850 50  0001 C CNN
+	1    7400 1850
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
